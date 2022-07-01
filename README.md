@@ -1,4 +1,4 @@
-# [Aria Business](https://github.com/ErickKS/aria-business.git)
+# [Aria Business](https://erickks.github.io/aria-business/)
 Elegant and responsive Website!
 ##
 
