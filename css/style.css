@@ -181,7 +181,7 @@ nav .logo {
 
 #hamburger {
     width: 2.5rem;
-    border-top: .2re solid var(--color-white);
+    border-top: .2rem solid var(--color-white);
 }
 
 #hamburger::after, #hamburger::before {
