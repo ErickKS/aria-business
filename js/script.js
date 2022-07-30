@@ -17,25 +17,18 @@ function closeNav() {
     nav.classList.toggle('active')
 }
 
-// NAV FIXA 
+// NAV FIXED ON SCROLL
 
-$(window).width()
-
-let navFixed = false;
-
-$(window).scroll(function() {
-    let scrollPosition = $(window).scrollTop();
-  
-    if(scrollPosition < 10 && !navFixed) {
-        navFixed = true;
-        $('#nav').removeClass('navFixed');
-    }
-  
-    if(scrollPosition > 10 && navFixed) {
-        navFixed = false;
-        $('#nav').addClass('navFixed');
-    }
-});
+(function () {
+    const menu = document.getElementById('nav');
+    window.addEventListener('scroll', function () {
+        if (window.scrollY > 10) {
+            menu.classList.add('navFixed');
+        } else {
+            menu.classList.remove('navFixed');
+        }
+    });
+})();
 
 // SCROLL NAV EFFECT
 
