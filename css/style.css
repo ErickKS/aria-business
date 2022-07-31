@@ -1142,13 +1142,16 @@ footer .container {
 footer h3,
 footer p {
     color: var(--color-white);
-    margin-block: .8rem;
 }
 
 .box-footer .footer-single {
     display: flex;
     flex-direction: column;
     margin-block: 1rem 1.5rem;
+}
+
+.footer-single p {
+    margin-block: .8rem;
 }
 
 footer a {
@@ -1159,6 +1162,7 @@ footer a {
 
 .footer-copyright {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     padding-block: 1rem;
     text-align: center;
