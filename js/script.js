@@ -1,3 +1,21 @@
+// PRE LOADER
+
+window.onload = () => {
+    const layer = document.getElementById('layer')
+    const body = document.querySelector('body')
+
+    setTimeout(() => {
+        body.style.overflowY = "visible"
+        layer.style.opacity = '0';
+
+        if(layer.style.opacity == 0) {
+            setTimeout(() => {
+                layer.style.display = "none";
+            },500)
+        }
+    }, 1500)
+}
+
 // NAV
 
 const btnMobile = document.getElementById('btn-mobile')
