@@ -102,6 +102,57 @@ p i {
     margin-right: 0.15rem;
 }
 
+/* ================================== PRE LOADER ================================== */
+
+body {
+    overflow-y: hidden;
+}
+
+#layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background-color: var(--secondary-color);
+    transition: opacity .5s;
+}
+
+.dots:before {
+    content: '';
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 16px;
+    height: 16px;
+    border-radius: 100%;
+    animation: dots-animation .85s infinite ease;
+}
+
+@keyframes dots-animation {
+    0%,
+    100% {
+        -webkit-box-shadow: -2.6rem 3.2rem 0 0 #FFF, 0 3.2rem 0 0 #FFF, 2.6rem 3.2rem 0 0 #FFF;
+        box-shadow: -2.6rem 3.2rem 0 0 #FFF, 0 3.2rem 0 0 #FFF, 2.6rem 3.2rem 0 0 #FFF;
+    }
+    35% {
+        -webkit-box-shadow: -2.6rem 3.2rem 0 .4rem var(--primary-color), 0 3.2rem 0 0 #FFF, 2.6rem 3.2rem 0 0 #FFF;
+        box-shadow: -2.6rem 3.2rem 0 .4rem var(--primary-color), 0 3.2rem 0 0 #FFF, 2.6rem 3.2rem 0 0 #FFF;
+    }
+    50% {
+        -webkit-box-shadow: -2.6rem 3.2rem 0 0 #FFF, 0 3.2rem 0 .4rem var(--primary-color), 2.6rem 3.2rem 0 0 #FFF;
+        box-shadow: -2.6rem 3.2rem 0 0 #FFF, 0 3.2rem 0 .4rem var(--primary-color), 2.6rem 3.2rem 0 0 #FFF;
+    }
+    65% {
+        -webkit-box-shadow: -2.6rem 3.2rem 0 0 #FFF, 0 3.2rem 0 0 #FFF, 2.6rem 3.2rem 0 .4rem var(--primary-color);
+        box-shadow: -2.6rem 3.2rem 0 0 #FFF, 0 3.2rem 0 0 #FFF, 2.6rem 3.2rem 0 .4rem var(--primary-color);
+    }
+}
+
 /* ================================== NAV ================================== */
 
 nav {
