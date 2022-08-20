@@ -34,8 +34,8 @@ html, body {
   
 .container {
     width: min(42.5rem, 100%);
-    margin: 0 auto;
-    padding: 0 2rem;
+    margin-inline: auto;
+    padding-inline: 2rem;
 }
 
 p,
@@ -127,8 +127,8 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 16px;
-    height: 16px;
+    width: 1.6rme;
+    height: 1.6rem;
     border-radius: 100%;
     animation: dots-animation .85s infinite ease;
 }
@@ -156,37 +156,40 @@ body {
 /* ================================== NAV ================================== */
 
 nav {
+    position: fixed;
     width: 100%;
     height: 6rem;
-    padding-bottom: 1rem;
-    transition: .3s;
-    background-color: transparent;
-    position: absolute;
+    padding-block: 2.4rem;
+    background-color: var(--secondary-color);
     z-index: 2;
+    transition: .3s;
 }
 
 nav.navFixed {
-    background-color: var(--secondary-color);
-    position: fixed;
-    padding-bottom: 0;
+    padding-block: 1.4rem;
+    height: 5.5rem;
 }
 
 nav .container {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    height: 100%
+    width: min(76.8rem, 100%);
+    height: 100%;
 }
 
 nav .logo {
     min-width: 11rem;
-    height: 3.2rem;
+}
+
+nav .log a img {
+    vertical-align: middle;
 }
 
 #navigation ul {
     display: block;
     position: absolute;
-    top: 6rem;
+    top: 5.5rem;
     left: 0;
     width: 100%;
     height: 0;
@@ -199,11 +202,10 @@ nav .logo {
 }
 
 #navigation ul li {
-    padding: .5rem .3rem;
-}
-
-#navigation ul li:last-child {
-    padding-bottom: 1.2rem;
+    text-align: left;
+    padding: .5rem 2rem;
+    width: min(76.8rem, 100%);
+    margin-inline: auto;
 }
 
 #navigation ul li a {
@@ -218,7 +220,7 @@ nav .logo {
 
 #navigation button {
     display: flex;
-    padding: .8rem 1.6prem;
+    padding: .8rem 1.6rem;
     border: none;
     background: none;
     cursor: pointer;
@@ -259,14 +261,14 @@ nav .logo {
     top: -.7rem;
 }
 
-nav .social-media {
+#navigation .social-media {
     display: none;
 }
 
 /* ================================== HEADER ================================== */
 
 header {
-    height: 69rem; /* pc 89rem */
+    height: 69rem;
     background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.5)), url("../images/header-background.jpg");
     background-position: center;
     background-size: cover;
@@ -1238,13 +1240,17 @@ footer a {
         overflow-y: initial;
     }
 
-    nav .box-nav-icon {
-        display: flex;
-        align-items: center;
+    nav {
+        background-color: transparent;
+        padding-top: 5rem;
     }
 
-    #navigation {
-        margin-right: 1rem;
+    nav.navFixed {
+        background-color: var(--secondary-color);
+    }
+
+    nav .container {
+        width: min(128rem, 100%);
     }
 
     #navigation button {
@@ -1260,12 +1266,9 @@ footer a {
         background-color: transparent;
     }
 
-    #navigation ul li:last-child {
-        padding-block: 0;
-    }
-
-    nav .social-media {
-        display: flex;
+    #navigation ul li {
+        width: auto;
+        padding-inline: .5rem;
     }
 
     /* ================================== HEADER ================================== */
@@ -1503,6 +1506,25 @@ footer a {
 }
 
 @media (min-width: 902px) {
+    #navigation {
+        display: flex;
+        align-items: center;
+    }
+
+    #navigation .social-media {
+        display: flex;
+    }
+
+    #navigation .social-media .hexagon {
+        width: 3rem;
+        height: 3rem;
+        background-size: 3rem;
+    }
+    
+    #navigation .social-media .hexagon i {
+        font-size: 1.4rem;
+    }
+    
     .additional-2-top {
         flex-direction: row;
     }
