@@ -127,7 +127,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 1.6rme;
+    width: 1.6rem;
     height: 1.6rem;
     border-radius: 100%;
     animation: dots-animation .85s infinite ease;
