@@ -208,6 +208,7 @@ nav .log a img {
     margin-inline: auto;
 }
 
+#navigation ul li a:hover,
 #navigation ul li a {
     display: block;
     padding: .5rem;
