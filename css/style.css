@@ -208,13 +208,13 @@ nav .log a img {
     margin-inline: auto;
 }
 
-#navigation ul li a:hover,
 #navigation ul li a {
     display: block;
     padding: .5rem;
     transition: .2s ease-in;
 }
 
+#navigation ul li a:hover,
 #navigation ul li a.selected {
     color: var(--primary-color);
 }
