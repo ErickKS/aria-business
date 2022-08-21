@@ -35,18 +35,36 @@ function closeNav() {
     nav.classList.toggle('active')
 }
 
-// NAV FIXED ON SCROLL
+// NAV FIXED ON SCROLL  &&  SCROLL TO TOP BTN VISIBILITY
+
+const btnUp = document.getElementById('arrowUp');
+const menu = document.getElementById('nav');
 
 (function () {
-    const menu = document.getElementById('nav');
     window.addEventListener('scroll', function () {
         if (window.scrollY > 10) {
             menu.classList.add('navFixed');
         } else {
             menu.classList.remove('navFixed');
         }
+
+        if (window.scrollY > 400) {
+            btnUp.style.display = "block";
+        } else {
+            btnUp.style.display = "none";
+        }
     });
 })();
+
+// SCROLL TO TOP EFFECT
+
+const scrollTop = () => {
+    window.scroll({
+        top: 0
+    });
+};
+
+btnUp.onclick = scrollTop;
 
 // SCROLL NAV EFFECT
 
