@@ -153,6 +153,28 @@ body {
     }
 }
 
+/* ================================== ARROW UP ================================== */
+
+#arrowUp {
+    display: none;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    width: 4.2rem;
+    height: 4.2rem;
+    margin-right: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 50%;
+    border: none;
+    background-color: var(--primary-color);
+    z-index: 2;
+}
+
+#arrowUp i {
+    font-size: 2rem;
+    color: var(--color-white);
+}
+
 /* ================================== NAV ================================== */
 
 nav {
