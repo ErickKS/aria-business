@@ -534,6 +534,7 @@ section.services {
     border-color: var(--primary-color);
 }
 
+/* ========== */
 
 .additional-2 {
     display: flex;
@@ -551,29 +552,57 @@ section.services {
     align-items: center;
 }
 
-.additional-2-top .additional-2-tittle {
-    margin-block: .5rem;
+.additional-2-tittle {
     width: 100%;
-    cursor: pointer;
-    text-align: center;
 }
 
-.additional-2-top .additional-2-tittle i {
+.additional-2-tittle button {
+    width: 100%;
+    background-color: var(--quaternary-color);
+    border: none;
+    padding: 1rem;
+    text-align: center;
+    font-size: 2.1rem;
+    font-weight: 700;
+    color: var(--font-color-primary);
+    transition: .3s;
+    cursor: pointer;
+}
+
+.additional-2-tittle button {
     position: relative;
     top: -.15rem;
     margin-right: .15rem;
 }
 
-.additional-2-tittle.active i,
-.additional-2-tittle.active h3 {
+.additional-2-tittle button.active,
+.additional-2-tittle button.active i {
     color: var(--primary-color);
+}
+
+.additional-2-tittle button i {
+    position: relative;
+    top: -.15rem;
 }
 
 .additional-2-content {
     margin-block: 4.5rem;
 }
 
-.content-business a {
+.additional-content-box {
+    height: 0;
+    opacity: 0;
+    visibility: hidden;
+    transition: all ease-out;
+}
+
+.additional-content-box.active {
+    height: auto;
+    opacity: 1;
+    visibility: visible;
+}
+
+#business a {
     color: var(--primary-color);
     text-transform: initial;
     text-decoration: underline;
@@ -581,7 +610,7 @@ section.services {
     line-height: 2.5rem;
 }
 
-.content-business p {
+#business p {
     margin-block: 1.5rem;
 }
 
@@ -609,6 +638,9 @@ section.services {
     width: 100%;
     height: 2.2rem;
     border-radius: .2rem;
+}
+
+#business.active .box-progress .progress-bar {
     animation: progress 1s ease-in-out;
 }
 
@@ -621,11 +653,8 @@ section.services {
     }
 }
 
-.content-expertise {
-    display: none;
-}
 
-.content-expertise .box-expertise {
+#expertise .box-expertise {
     display: grid;
 }
 
@@ -646,29 +675,25 @@ section.services {
     color: var(--font-color-primary);
 }
 
-.content-quality {
-    display: none;
-}
-
-.content-quality > p {
+#quality > p {
     margin-block: 1.5rem;
 }
 
-.content-quality > p b:last-child {
+#quality > p b:last-child {
     color: var(--primary-color);
     text-decoration: underline;
     font-weight: 400;
 }
 
-.content-quality ul {
+#quality ul {
     margin-top: 2.5rem;
 }
 
-.content-quality ul li {
+#quality ul li {
     margin-block: .7rem;
 }
 
-.content-quality ul i{
+#quality ul i{
     color: var(--primary-color);
     font-size: 1.1rem;
     position: relative;
@@ -1392,12 +1417,12 @@ footer a {
         justify-content: center;
     }
     
-    .additional-2-top .additional-2-tittle {
+    .additional-2-tittle {
         margin: 0.5rem 1rem;
         width: initial;
     }
 
-    .content-expertise .box-expertise {
+    #expertise .box-expertise {
         display: grid;
         grid-template-columns: 1fr 1fr;
         column-gap: 2rem;

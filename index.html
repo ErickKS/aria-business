@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Erick Kuwahara">
-    <title>Aria Business - Prototype</title>
+    <title>Aria Business</title>
 
     <!-- LOGO ICON -->
     <link rel="icon" href="./images/favicon.png">
@@ -200,6 +200,7 @@
                 </div>
             </div>
         </div>
+        
         <div class="additional">
             <div class="additional-1">
                 <img src="./images/services-background-1.jpg" alt="illustrative image">
@@ -237,20 +238,20 @@
 
             <div class="additional-2">
                 <img src="./images/services-background-2.jpg" alt="illustrative image">
-                <div class="container">
+                <div class="container additional-2-txt">
                     <div class="additional-2-top">
                         <div class="additional-2-tittle active">
-                            <h3><i class="fa-solid fa-table-cells"></i> Business</h3>
+                            <button data-id="business" class="additional-2-btn active"><i class="fa-solid fa-table-cells"></i> Business</button>
                         </div>
                         <div class="additional-2-tittle">
-                            <h3><i class="fa-solid fa-table-cells"></i> Expertise</h3>
+                            <button data-id="expertise" class="additional-2-btn"><i class="fa-solid fa-table-cells"></i> Expertise</button>
                         </div>
                         <div class="additional-2-tittle">
-                            <h3><i class="fa-solid fa-table-cells"></i> Quality</h3>
+                            <button data-id="quality" class="additional-2-btn"><i class="fa-solid fa-table-cells"></i> Quality</button>
                         </div>
                     </div>
                     <div class="additional-2-content">
-                        <div class="content-business">
+                        <div id="business" class="additional-content-box active">
                             <h3>Business Services For Companies</h3>
                             <p>Aria provides the most innovative and customized business services in the industry. Our
                                 <a href="#services">Services</a> section shows how flexible we are for all types of
@@ -275,7 +276,8 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="content-expertise">
+
+                        <div id="expertise" class="additional-content-box">
                             <div class="box-expertise">
                                 <div class="expertise-single">
                                     <span>1</span>
@@ -306,7 +308,8 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="content-quality">
+
+                        <div id="quality" class="additional-content-box">
                             <p><b>We strive to achieve</b> 100% customer satisfaction for both types of customers:
                                 hiring companies and job seekers. Types of customers: <b>with huge potential</b></p>
                             <p><b>Our goal is to help</b> your company achieve its full potential and establish long
@@ -339,6 +342,7 @@
                 </div>
             </div>
         </div>
+
         <div class="testimonials">
             <div class="container">
                 <h2>Read Our Customer Testimonials</h2>
