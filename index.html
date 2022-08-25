@@ -52,13 +52,22 @@
                         <span id="hamburger"></span>
                     </button>
                     <ul id="ul" class="menu">
-                        <li><a onclick="closeNav()" href="#home">Home</a></li>
-                        <li><a onclick="closeNav()" href="#intro">Intro</a></li>
-                        <li><a onclick="closeNav()" href="#services">Services</a></li>
-                        <li><a onclick="closeNav()" href="#call">Call me</a></li>
-                        <li><a onclick="closeNav()" href="#projects">Projects</a></li>
-                        <li><a onclick="closeNav()" href="#about">About</a></li>
-                        <li><a onclick="closeNav()" href="#contact">Contact</a></li>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#intro">Intro</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#call">Call me</a></li>
+                        <li><a href="#projects">Projects</a></li>
+
+                        <!-- dropdown -->
+                        <li>
+                            <a id="dropA" href="#about">About <i class="fa-solid fa-sort-down"></i></a>
+                            <ul id="dropUl">
+                                <li><a href="./pages/terms-conditions.html">Term conditions</a></li>
+                                <li><a href="./pages/privacy-policy.html">Privacy Policy</a></li>
+                            </ul>
+                        </li>
+
+                        <li><a href="#contact">Contact</a></li>
                     </ul>
                     
                     <div class="social-media">
@@ -429,7 +438,7 @@
                     </select>
                     <div class="check">
                         <input type="checkbox" name="checkbox" required>
-                        <p>I agree with Aria's stated <a href="./">Privacy Policy</a> and <a href="./">Terms &
+                        <p>I agree with Aria's stated <a href="./pages/privacy-policy.html">Privacy Policy</a> and <a href="./pages/terms-conditions.html">Terms &
                                 Conditions</a></p>
                     </div>
                     <input type="submit" value="Call me">
@@ -640,7 +649,7 @@
                     <textarea name="message" placeholder=" "></textarea><label>Your message</label>
                     <div class="check">
                         <input type="checkbox" name="checkbox" required>
-                        <p>I agree with Aria's stated <a href="./">Privacy Policy</a> and <a href="./">Terms &
+                        <p>I agree with Aria's stated <a href="./pages/privacy-policy.html">Privacy Policy</a> and <a href="./pages/terms-conditions.html">Terms &
                                 Conditions</a></p>
                     </div>
                     <input type="submit" value="Call me">
@@ -661,8 +670,8 @@
                 <div class="footer-single">
                     <h3>Links</h3>
                     <a href="./">startupguide.com</a>
-                    <a href="./">Terms & Conditions</a>
-                    <a href="./">Privacy Policy</a>
+                    <a href="./pages/terms-conditions.html">Terms & Conditions</a>
+                    <a href="./pages/privacy-policy.html">Privacy Policy</a>
                 </div>
                 <div class="footer-single">
                     <h3>Tools</h3>
@@ -679,7 +688,7 @@
             </div>
             <div class="footer-copyright">
                 <p>Copyright © 2045 All rights reserved - By Inovatik</p>
-                <p>Developed by Erick Kuwahara</p>
+                <p>Developed by <a href="https://github.com/ErickKS">Erick Kuwahara</a></p>
             </div>
         </div>
     </footer>

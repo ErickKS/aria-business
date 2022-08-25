@@ -18,22 +18,44 @@ window.onload = () => {
 
 // NAV
 
-const btnMobile = document.getElementById('btn-mobile')
-const nav = document.getElementById('navigation')
+const btnMobile = document.getElementById('btn-mobile');
+const nav = document.getElementById('navigation');
+
+const dropBtn = document.getElementById('dropA');
+const dropList = document.getElementById('dropUl');
 
 function toggleMenu(event) {
     if (event.type === 'touchstart') event.preventDefault();
-    nav.classList.toggle('active')
+    nav.classList.toggle('active');
+
+    document.documentElement.onclick = function(event){
+        if (event.target !== dropBtn && event.target !== dropList) {
+            if(window.screen.width <= 990) {
+                dropBtn.classList.remove('active');
+                dropList.classList.remove('active');
+                nav.classList.remove('active');
+            }
+        }
+    }
 }
 
-btnMobile.addEventListener('click', toggleMenu)
-btnMobile.addEventListener('touchstart', toggleMenu)
-
-// CLOSE NAV ON CLICK UL -> A 
-
-function closeNav() {
-    nav.classList.toggle('active')
+function dropdown() {
+    dropBtn.classList.toggle('active');
+    dropList.classList.toggle('active');
+    
+    if(window.screen.width > 990) {
+        document.documentElement.onclick = function(event){
+            if (event.target !== dropBtn && event.target !== dropList) {
+                dropBtn.classList.remove('active');
+                dropList.classList.remove('active');
+            }
+        }
+    }
 }
+
+btnMobile.addEventListener('click', toggleMenu);
+btnMobile.addEventListener('touchstart', toggleMenu);
+dropBtn.addEventListener('click', dropdown);
 
 // NAV FIXED ON SCROLL  &&  SCROLL TO TOP BTN VISIBILITY
 

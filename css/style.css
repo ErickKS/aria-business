@@ -862,8 +862,8 @@ section.call {
 }
 
 .check input {
-    width: 1.8rem;
-    height: 1.8rem;
+    width: 1.6rem;
+    height: 1.6rem;
     position: relative;
     top: .3rem;
     margin-bottom: 0;
@@ -871,6 +871,7 @@ section.call {
 }
 
 .check p {
+    font-size: 1.4rem;
     color: var(--color-white);
     line-height: 3rem;
 }
@@ -879,7 +880,7 @@ section.call {
     color: var(--primary-color);
     text-transform: initial;
     text-decoration: underline;
-    font-size: 1.6rem;
+    font-size: 1.4rem;
     line-height: 2.5rem;
 }
 
@@ -1268,6 +1269,259 @@ footer a {
     text-align: center;
 }
 
+.footer-copyright a {
+    text-transform: initial;
+    font-weight: 400;
+    font-size: 1.6rem;
+}
+
+/* =========================================================================== */
+/* ================================== EXTRA ================================== */
+/* =========================================================================== */
+
+header.extra {
+    background-image: none;
+    height: auto;
+}
+
+.tittle {
+    background-color: var(--secondary-color);
+    padding-block: 17rem;
+}
+
+.tittle .container {
+    text-align: center;
+}
+
+.tittle h1 {
+    width: min(86rem, 100%);
+    margin-inline: auto;
+    color: var(--color-white);
+    text-transform: initial;
+}
+
+.road {
+    background-color: var(--quaternary-color);
+    padding-block: 3rem;
+}
+
+.road .container {
+    display: flex;
+    align-items: center;
+}
+
+.road a, 
+.content a {
+    color: var(--font-color-secondary);
+    text-transform: initial;
+    text-decoration: underline;
+    font-weight: 400;
+    font-size: 1.6rem;
+}
+
+.road i {
+    margin-inline: 1rem;
+    font-size: 1.2rem;
+    color: var(--font-color-secondary);
+}
+
+.content {
+    padding-block: 4rem;
+}
+
+.content h2 {
+    margin-block: 6rem 1rem;
+    font-size: 2.4rem;
+    color: var(--font-color-primary);
+}
+
+.content a {
+    color: var(--primary-color);
+}
+
+.content p {
+    margin-block: 1rem;
+}
+
+.content ul {
+    padding-left: 2rem;
+}
+
+.content ul li {
+    display: grid;
+    grid-template-columns: .9rem 1fr;
+    gap: .8rem;
+}
+
+.content ul li p {
+    margin-block: .5rem;
+}
+
+.content ul li i {
+    font-size: .8rem;
+    position: relative;
+    top: 1.2rem;
+    color: var(--primary-color);
+}
+
+.content a.back {
+    display: inline-block;
+    text-align: center;
+    width: 11rem;
+    padding-block: 1rem;
+    margin-top: 2rem;
+    margin-bottom: 4rem;
+    margin-right: 1rem;
+    border-radius: .5rem;
+    background-color: transparent;
+    border: .2rem solid var(--font-color-secondary);
+    color: var(--font-color-secondary);
+    font-size: 1.4rem;
+    font-weight: 700;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: .2s ease-in;
+}
+
+.content a.back:hover {
+    background-color: var(--font-color-secondary);
+    color: var(--color-white);
+}
+
+.content .img img {
+    width: 100%;
+    border-radius: .5rem;
+}
+
+/* =================================== PRIVACY POLICY =================================== */
+
+ol {
+    padding-left: 4rem;
+    color: var(--font-color-secondary);
+}
+
+.mg {
+    margin-top: 6rem;
+}
+
+.mg h2 {
+    margin-top: 0rem;
+}
+
+.content-divider {
+    display: grid;
+}
+
+.content-divider form {
+    position: relative;
+}
+
+.content-divider form input:not(input:last-of-type) {
+    width: 100%;
+    height: 5rem;
+    margin-bottom: 2rem;
+    padding: 1.8rem 2.1rem 0 2.1rem;
+    border: .1rem solid #ccc;
+    border-radius: .4rem;
+    background-color: var(--color-white);
+    outline: none;
+    font-size: 1.6rem;
+    line-height: 2.2rem;
+    color: var(--font-color-secondary);
+    z-index: 2;
+}
+
+.content-divider form label {
+    position: absolute;
+    left: 0;
+    margin: 1.3rem 2.2rem;
+    font-size: 1.6rem;
+    color: var(--font-color-secondary);
+    transform-origin: 0 0;
+    transition: .2s;
+    z-index: 1;
+}
+
+.content-divider form input:focus+label {
+    transform: translateY(-1rem) scale(0.8);
+}
+
+.content-divider form input:not(:placeholder-shown)+label {
+    transform: translateY(-1rem) scale(0.8);
+}
+
+.content-divider form input:not(:placeholder-shown) {
+    border: .1rem solid #b6b6b6;
+}
+
+.content-divider select {
+    width: 100%;
+    height: 5rem;
+    margin-bottom: 2rem;
+    padding: 1rem 2rem;
+    border: .1rem solid #ccc;
+    border-radius: .4rem;
+    background-color: var(--color-white);
+    outline: none;
+    font-size: 1.6rem;
+    line-height: 2.2rem;
+    color: var(--font-color-secondary);
+    z-index: 2;
+    cursor: pointer;
+}
+
+.content-divider select option:disabled {
+    color: rgb(201, 201, 201);
+}
+
+.content-divider .check input, 
+.content-divider .check p {
+    display: inline;
+}
+
+.content-divider .check input {
+    width: 1.6rem;
+    height: 1.6rem;
+    position: relative;
+    top: .3rem;
+    margin-bottom: 0;
+    cursor: pointer;
+}
+
+.content-divider .check p {
+    font-size: 1.4rem;
+    color: var(--font-color-secondary);
+    line-height: 3rem;
+}
+
+.content-divider .check a {
+    font-size: 1.4rem;
+    color: var(--primary-color);
+    text-transform: initial;
+    text-decoration: underline;
+    line-height: 2.5rem;
+}
+
+.content-divider form input[type=submit] {
+    width: 100%;
+    height: 5rem;
+    margin-block: 2rem;
+    background-color: var(--primary-color);
+    border: .2rem solid var(--primary-color);
+    border-radius: .4rem;
+    text-transform: uppercase;
+    color: #fff;
+    font-size: 1.4rem;
+    font-weight: 600;
+    transition: .2s;
+    cursor: pointer;
+}
+
+.content-divider form input[type=submit]:hover {
+    background-color: transparent;
+    color: var(--primary-color);
+}
+
 /* ================================================================================ */
 /* ================================== RESPONSIVE ================================== */
 /* ================================================================================ */
@@ -1571,9 +1825,18 @@ footer a {
     #navigation .social-media .hexagon i {
         font-size: 1.4rem;
     }
+
+    /* ================================== ADDITIONAL ================================== */
     
     .additional-2-top {
         flex-direction: row;
+    }
+
+    /* ================================== PRIVACY POLICY ================================== */
+
+    .content-divider {
+        grid-template-columns: 1fr 1fr;
+        gap: 3rem;
     }
 }
 
