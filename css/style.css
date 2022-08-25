@@ -214,6 +214,7 @@ nav .log a img {
     left: 0;
     width: 100%;
     height: 0;
+    padding-block: .5rem;
     background-color: var(--secondary-color);
     text-align: center;
     visibility: hidden;
@@ -229,7 +230,7 @@ nav .log a img {
     margin-inline: auto;
 }
 
-#navigation  > ul li a {
+#navigation > ul li a {
     display: block;
     padding: .5rem;
     transition: .2s ease-in;
@@ -318,7 +319,7 @@ nav .log a img {
 }
 
 #dropUl li:nth-of-type(2) a {
-    border-top: 1px solid #c4d8dc49;
+    border-top: .1rem solid #c4d8dc49;
 }
 
 #dropA.active i {
