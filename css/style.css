@@ -207,7 +207,7 @@ nav .log a img {
     vertical-align: middle;
 }
 
-#navigation ul {
+#navigation > ul {
     display: block;
     position: absolute;
     top: 5.5rem;
@@ -222,21 +222,21 @@ nav .log a img {
     z-index: 1;
 }
 
-#navigation ul li {
+#navigation > ul li {
     text-align: left;
     padding: .5rem 2rem;
     width: min(76.8rem, 100%);
     margin-inline: auto;
 }
 
-#navigation ul li a {
+#navigation  > ul li a {
     display: block;
     padding: .5rem;
     transition: .2s ease-in;
 }
 
-#navigation ul li a:hover,
-#navigation ul li a.selected {
+#navigation > ul li a:hover,
+#navigation > ul li a.selected {
     color: var(--primary-color);
 }
 
@@ -285,6 +285,50 @@ nav .log a img {
 
 #navigation .social-media {
     display: none;
+}
+
+/* == Dropdown == */
+
+#dropA {
+    cursor: pointer;
+}
+
+#dropA i {
+    font-size: 1.4rem;
+    position: relative;
+    top: -.3rem;
+    left: .2rem;
+    transform: rotateX(0);
+    transition: transform .3s;
+    color: var(--color-white);
+}
+
+#dropUl {
+    height: 0;
+    overflow-y: hidden;
+    transition: .5s ease-in-out;
+}
+
+#dropUl li {
+    padding: 0 !important;
+}
+
+#dropUl li a {
+    padding: 1.2rem 2rem !important;
+}
+
+#dropUl li:nth-of-type(2) a {
+    border-top: 1px solid #c4d8dc49;
+}
+
+#dropA.active i {
+    color: var(--primary-color);
+    transform: rotateX(-180deg);
+    top: .3rem;
+}
+
+#dropUl.active {
+    height: 8rem;
 }
 
 /* ================================== HEADER ================================== */
@@ -1536,7 +1580,6 @@ ol {
     /* ================================== NAV ================================== */
 
     nav * {
-        position: initial;
         visibility: initial;
         overflow-y: initial;
     }
@@ -1562,7 +1605,6 @@ ol {
         display: flex;
         align-items: center;
         position: initial;
-        width: 100%;
         height: initial;
         background-color: transparent;
     }
@@ -1570,6 +1612,34 @@ ol {
     #navigation ul li {
         width: auto;
         padding-inline: .5rem;
+    }
+
+    #navigation #dropUl {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 7.5rem;
+        background-color: var(--secondary-color);
+        border-radius: .3rem;
+        box-shadow: 0 .35rem .5rem rgba(0, 0, 0, .1);
+        transition: .2s;
+    }
+
+    nav.navFixed #dropUl {
+        transform: translateY(-2.5rem);
+    }
+
+    #dropUl li {
+        padding-inline: 2rem !important;
+    }
+
+    #dropUl li a {
+        padding: 1.4rem 0 !important;
+    }
+
+    #navigation #dropUl.active {
+        display: flex;  
+        height: auto;
     }
 
     /* ================================== HEADER ================================== */
