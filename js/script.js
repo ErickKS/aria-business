@@ -13,7 +13,7 @@ window.onload = () => {
                 layer.style.display = "none";
             },500)
         }
-    }, 1500)
+    }, 1200)
 }
 
 // NAV
@@ -184,4 +184,34 @@ $('.slider').slick({
           }
         },
     ]
+});
+
+// INDICATORS ANIMATION
+
+const sectionIndicator = document.getElementById('about');
+const valueDisplays = document.querySelectorAll('.numbers');
+let enteredIndicatorSection = false;
+let valueInterval = 2000;
+
+window.addEventListener('scroll', (e) => {
+    const activeAnimation = (window.scrollY + window.innerHeight) >= sectionIndicator.offsetTop;
+
+    if(activeAnimation && !enteredIndicatorSection) {
+        enteredIndicatorSection = true;
+
+        valueDisplays.forEach((valueDisplay) => {
+            let startValue = 0;
+            let endValue = parseInt(valueDisplay.getAttribute('data-val'));
+            let duration = Math.floor(valueInterval / endValue);
+        
+            let counter = setInterval(function () {
+                startValue += 1;
+                valueDisplay.textContent = startValue;
+        
+                if(startValue == endValue) {
+                    clearInterval(counter);
+                }
+            }, duration)
+        })
+    }
 });
